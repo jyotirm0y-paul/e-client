@@ -18,7 +18,7 @@ const AddAdmin = () => {
         console.log(info);
         formData.append('email', info.email);
 
-        fetch('http://localhost:5000/addAdmin', {
+        fetch('https://enigmatic-mountain-35188.herokuapp.com/addAdmin', {
             method: 'POST',
             body: formData
         })
