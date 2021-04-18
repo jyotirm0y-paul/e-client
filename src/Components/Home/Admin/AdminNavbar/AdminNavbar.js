@@ -3,6 +3,7 @@ import './AdminNavbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFirstOrder } from '@fortawesome/free-brands-svg-icons';
 import { faPlus, faTasks, faUserPlus } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 const AdminNavbar = () => {
     return (
         <div className="adminNavbar ">
@@ -10,9 +11,10 @@ const AdminNavbar = () => {
                 {/* <a style={{textAlign:'left'}} class="logo" href="#">Navbar</a> */}
                 <h4>Cozy</h4>
                 <ul>
-                    <li>
-                        <a class="nav-link" href="#"><FontAwesomeIcon className="navbar-icon" icon={faFirstOrder} />Order</a>
-                    </li>
+                <li>
+                    <Link to="/addService"><span>Add Service</span> 
+                    </Link>
+                </li>
                     <li>
                         <a class="nav-link" href="#"><FontAwesomeIcon className="navbar-icon" icon={faPlus} />Add Service</a>
                     </li>

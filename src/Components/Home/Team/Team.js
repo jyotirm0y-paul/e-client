@@ -2,7 +2,7 @@ import React from 'react';
 import './Team.css'
 const Team = (props) => {
     const { name, image } = props.data;
-    console.log(props)
+    // console.log(props)
     return (
         <div className="col-md-6 col-lg-4 col-sm-12">
             <div className="card-body " >

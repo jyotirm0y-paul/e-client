@@ -1,39 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Service from '../Service/Service';
-import lost from '../../../images/service-1.jpg';
-import perfect from '../../../images/service-2.jpg';
-import clients from '../../../images/service-3.jpg'
 import './Services.css'
 
 
 const Services = () => {
-    const serviceData = [
-        {
-            image: lost,
-            title: "Places to get lost",
-            description: "mei. Mei an pericula euripidis, hinc partem ei est. Eos ei nisl graecis, vix aperiri consequat an. Eius lorem tincidunt vix at",
-        },
-        {
-            image: perfect,
-            title: "Perfect Design",
-            description: "mei. Mei an pericula euripidis, hinc partem ei est. Eos ei nisl graecis, vix aperiri consequat an. Eius lorem tincidunt vix at",
-        },
-        {
-            image: clients,
-            title: "Happy Clients",
-            description: "mei. Mei an pericula euripidis, hinc partem ei est. Eos ei nisl graecis, vix aperiri consequat an. Eius lorem tincidunt vix at",
-        }
-    ]
+    const [service, setService] = useState([]);
+    // console.log(service.length);
+  
+    useEffect(() => {
+      fetch('http://localhost:5000/services')
+      .then(res => res.json())
+      .then(data => setService(data))
+    }, [])
     return (
         <section className="services mt-5">
             <div className="container">
                 <div className="row">
                 <div className="service-section text-center mb-5">
                     <h1>Services</h1>
+                    {/* <h1>{service.length}</h1> */}
                 </div>
                 {
-                    serviceData.map(data => <Service data={data}></Service>)
-                }
+      service.map(service =><Service key={service._id} service={service}></Service>)
+    }
             </div>
             </div>
         </section>

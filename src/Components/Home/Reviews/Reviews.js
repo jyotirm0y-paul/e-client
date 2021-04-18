@@ -1,25 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import alexender from '../../../images/man-1.jpg';
 import john from '../../../images/man-2.jpg';
 import silvia from '../../../images/man-3.jpg';
 import Review from '../Review/Review';
 import './Reviews.css'
 const Reviews = () => {
-    const reviewData=[
-        {
-            image: alexender,
-            name: "Alexender Gary",
-
-        },
-        {
-            image: john,
-            name: "John Abraham",
-        },
-        {
-            image: silvia,
-            name: "Silvia Stan",
-        }
-    ]
+    const [reviews, setReviews] = useState([]);
+    // console.log(service.length);
+  
+    useEffect(() => {
+      fetch('http://localhost:5000/reviews')
+      .then(res => res.json())
+      .then(data => setReviews(data))
+    }, [])
     return (
         <section className="reviews pt-5">
             <div className="container">
@@ -28,8 +21,8 @@ const Reviews = () => {
                         <h1 className="pt-5">Reviews</h1>
                     </div>
                     {
-                        reviewData.map(data => <Review data={data}></Review>)
-                    }
+    reviews.map(review =><Review key={review._id} review={review}></Review>)
+  }
                 </div>
             </div>
         </section>

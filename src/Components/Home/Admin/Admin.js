@@ -3,7 +3,7 @@ import AddService from './AddService/AddService';
 import './Admin.css';
 import AdminEmail from './AdminEmail/AdminEmail';
 import AdminNavbar from './AdminNavbar/AdminNavbar';
-import Orders from './Orders/Orders';
+// import Orders from './Orders/Orders';
 const Admin = () => {
     return (
         <div className="admin-navbar pt-5 pb-5  d-flex justify-content-around">

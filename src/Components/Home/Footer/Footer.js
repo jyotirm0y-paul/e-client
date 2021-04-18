@@ -55,7 +55,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="footer-copyright">
+            <div className="footer-copyright text-center">
             <p>© 2016 theme All rights reserved</p>
             </div>
         </section>
