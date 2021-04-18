@@ -1,5 +1,7 @@
 import React from 'react';
+import AddService from './AddService/AddService';
 import './Admin.css';
+import AdminEmail from './AdminEmail/AdminEmail';
 import AdminNavbar from './AdminNavbar/AdminNavbar';
 import Orders from './Orders/Orders';
 const Admin = () => {
@@ -13,7 +15,9 @@ const Admin = () => {
                 <div className="admin-details">
                     <div className="container">
                         <div className="row">
-                        <Orders></Orders>
+                        {/* <Orders></Orders>
+                        <AddService></AddService> */}
+                        <AdminEmail></AdminEmail>
                         </div>
                     </div>
                 </div>

@@ -1,16 +1,24 @@
 import React from 'react';
-
+import './AddService.css';
 const AddService = () => {
     return (
-        <div>
-            {/* <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                <input type="email"id="exampleFormControlInput1" placeholder="name@example.com">
-</div>
+        <div className=" d-flex justify-content-between">
+            <div className="col-md-7 p-4">
                 <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-                    <textarea id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div> */}
+                    <label for="exampleFormControlInput1" class="form-label input-title text-sm-start">Name</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name" />
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label input-title text-sm-start">Price</label>
+                    <input type="value" class="form-control" id="exampleFormControlInput1" placeholder="Price" />
+                </div>
+            </div>
+            <div className="col-md-5 p-4">
+                <div class="mb-3">
+                    <label for="formFile" class="form-label input-title text-sm-start">Image</label>
+                    <input class="form-control" type="file" id="formFile"/>
+                </div>
+            </div>
             </div>
     );
 };
